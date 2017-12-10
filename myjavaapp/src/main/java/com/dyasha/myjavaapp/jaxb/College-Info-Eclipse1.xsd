@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="college-info" type="college"/>
+
+  <xs:element name="studentInfo" type="studentInfo"/>
+
+  <xs:complexType name="college">
+    <xs:sequence>
+      <xs:element name="college-name" type="xs:string" minOccurs="0"/>
+      <xs:element name="students-data" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="students" type="studentInfo" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="studentInfo">
+    <xs:sequence>
+      <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+      <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="regno" type="xs:int" use="required"/>
+  </xs:complexType>
+
+</xs:schema>
+

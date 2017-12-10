@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<college-info>
+    <college-name>Jspiders</college-name>
+    <students-data>
+        <students regno="1">
+            <firstName>AAA</firstName>
+            <lastName>BBB</lastName>
+        </students>
+        <students regno="2">
+            <firstName>XXX</firstName>
+            <lastName>YYY</lastName>
+        </students>
+    </students-data>
+</college-info>
