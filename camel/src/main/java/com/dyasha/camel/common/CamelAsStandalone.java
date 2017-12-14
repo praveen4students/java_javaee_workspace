@@ -1,12 +1,23 @@
-package com.dyasha.camel.activemq;
+package com.dyasha.camel.common;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
+import org.apache.camel.main.Main;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.dyasha.camel.activemq.CamelActiveMQRouteBuilder;
+import com.dyasha.camel.ftp.CamelFTPRouteBuilder;
 
 public class CamelAsStandalone {
 
 	public static void main(String[] args) throws Exception {
+        Main main = new Main();
+        main.addRouteBuilder(new CamelFTPRouteBuilder());
+        main.addRouteBuilder(new CamelActiveMQRouteBuilder());
+        main.run();
+    }
+	
+	public static void main2(String[] args) throws Exception {
 		runCamelUsingRouteBuilders();
 //		runCamelUsingXMLConfig();
 	}
@@ -14,7 +25,8 @@ public class CamelAsStandalone {
 	public static void runCamelUsingRouteBuilders() throws Exception {
 
 		CamelContext context = new DefaultCamelContext();
-	    context.addRoutes(new CamelActiveMQRouteBuilder());
+//	    context.addRoutes(new CamelActiveMQRouteBuilder());
+	    context.addRoutes(new CamelFTPRouteBuilder());
 	    context.start();
 		
 	}//End of Main

@@ -15,6 +15,8 @@ import static com.dyasha.jms.JMSAppConstants.*;
 
 public class JmsReadMessageFromTopicContinuously implements MessageListener{
 	
+	int count =0;
+	
 	public static void main(String[] args) throws JMSException {
 		
 		ConnectionFactory factory = new ActiveMQConnectionFactory(ACTIVE_MQ_URL);
@@ -33,7 +35,7 @@ public class JmsReadMessageFromTopicContinuously implements MessageListener{
 	public void onMessage(Message message) {
 		TextMessage textMessage = (TextMessage)message;
 		try {
-			System.out.println("Message: "+textMessage.getText());
+			System.out.println("Count:- "+(++count)+"Message: "+textMessage.getText());
 		} catch (JMSException e) {
 			e.printStackTrace();
 		}

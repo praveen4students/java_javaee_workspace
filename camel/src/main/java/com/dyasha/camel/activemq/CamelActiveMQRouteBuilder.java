@@ -9,8 +9,11 @@ public class CamelActiveMQRouteBuilder extends RouteBuilder{
 	@Override
 	public void configure() throws Exception {
 
+//		DataFormat jaxb = new JaxbDataFormat("com.dyasha.camel.activemq.jaxb");
+		
 		 from("activemq:queue:praveenQueue?jmsMessageType=Text")
-		 //.convertBodyTo(String.class)
+//		 .convertBodyTo(String.class)
+//		 .unmarshal(jaxb)
          .process(new Processor() {
              public void process(Exchange exchange) throws Exception {
             	 System.out.println("***************************************");
@@ -18,7 +21,7 @@ public class CamelActiveMQRouteBuilder extends RouteBuilder{
             	 System.out.println("***************************************");
              }
          })
-         .to("file:E://data/activemq/?fileExist=Append&fileName=ActiveMQMsg-${date:now:yyyyMMdd}.txt");
+         .to("file:E:\\tools\\camel_workspace\\activemq_files?fileExist=Append&fileName=ActiveMQMsg-${date:now:yyyyMMdd}.txt");
 	}
 
 }
