@@ -8,3 +8,41 @@ Endpoints
 Durable/Non Durable Subscribers/Publishers
 
 Consumer/Producer
+
+============================================================
+Camel Components / Endpoints to Learn:-
+--------------------------------------------
+1. File / camel-core 
+2. FTP / camel-ftp
+3. FTPS / camel-ftp
+4. SFTP / camel-ftp
+5. SMTP / camel-mail
+6. ActiveMQ / activemq-camel
+
+
+Cache / camel-cache
+Bean / camel-core
+CXF / camel-cxf
+CXF Bean / camel-cxf
+CXFRS / camel-cxf
+DataFormat / camel-core
+FreeMarker / camel-freemarker
+JDBC / camel-jdbc
+JMS / camel-jms
+Kafka / camel-kafka
+LDAP / camel-ldap
+Log / camel-core
+Mock / camel-core
+PDF / camel-pdf
+Quartz2 / camel-quartz2
+Rest / camel-core
+Scheduler / camel-core
+SEDA / camel-core
+SQL / camel-sql
+SQL Stored Procedure / camel-sql
+SSH component / camel-ssh
+Test / camel-spring
+Weather / camel-weather
+Hibernate / camel-hibernate / camel-extra
+
+
