@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>studentsApp-final</display-name>
+  <welcome-file-list>
+    <welcome-file>loginPage</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>myservlet</servlet-name>
+    <servlet-class>com.jspiders.studentsapp.servlets.MyFirstServlet</servlet-class>
+<!--     <load-on-startup>1</load-on-startup> -->
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myservlet</servlet-name>
+    <url-pattern>/currentDate</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.jspiders.studentsapp.servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>formEx</servlet-name>
+    <servlet-class>com.jspiders.studentsapp.servlets.FormExampleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>formEx</servlet-name>
+    <url-pattern>/formEx</url-pattern>
+  </servlet-mapping>
+ 
+ <!--  <error-page>
+    <error-code>404</error-code>
+    <location>/404Error.html</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/500Error.html</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    <location>/errorPage</location>
+  </error-page> -->
+  
+  <servlet>
+  	<servlet-name>myGeneric</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.MyGenericServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>myGeneric</servlet-name>
+  	<url-pattern>/myGeneric</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>createProfile</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.CreateProfileServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>createProfile</servlet-name>
+  	<url-pattern>/createProfile</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  	<param-name>movie1</param-name>
+  	<param-value>DDLJ</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>movie2</param-name>
+  	<param-value>KKHH</param-value>
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>s1</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.Servlet1</servlet-class>
+  	<init-param>
+  		<param-name>actor1</param-name>
+  		<param-value>Akshay Kumar</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>actor2</param-name>
+  		<param-value>Sunny Deol</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>s1</servlet-name>
+  	<url-pattern>/s1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>s2</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.Servlet2</servlet-class>
+  	<init-param>
+  		<param-name>actress1</param-name>
+  		<param-value>Katrina Kaif</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>actress2</param-name>
+  		<param-value>Priyanka Chopra</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>s2</servlet-name>
+  	<url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  	<servlet-name>redirect</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.RedirectServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>redirect</servlet-name>
+  	<url-pattern>/redirect</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>forward</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.ForwardServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>forward</servlet-name>
+  	<url-pattern>/forward</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>include</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.IncludeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>include</servlet-name>
+  	<url-pattern>/include</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>first</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.FirstServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>first</servlet-name>
+  	<url-pattern>/first</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>second</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.SecondServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>second</servlet-name>
+  	<url-pattern>/second</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>createCookie</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.CreateCookieServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>createCookie</servlet-name>
+  	<url-pattern>/createCookie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>readCookie</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.ReadCookieServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>readCookie</servlet-name>
+  	<url-pattern>/readCookie</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+  	<servlet-name>deleteCookie</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.DeleteCookieServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>deleteCookie</servlet-name>
+  	<url-pattern>/deleteCookie</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>studentSearch</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.StudentSearchServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>studentSearch</servlet-name>
+  	<url-pattern>/studentSearch</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>graingerSearch</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.GraingerSearchServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>graingerSearch</servlet-name>
+  	<url-pattern>/graingerSearch</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>loginErr</servlet-name>
+	<!--<servlet-class>com.jspiders.studentsapp.servlets.LoginErrorServlet</servlet-class> -->
+	<jsp-file>/LoginPageWithMsg.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>loginErr</servlet-name>
+  	<url-pattern>/loginErr</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>home</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.HomePageServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>home</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>logout</servlet-name>
+  	<servlet-class>com.jspiders.studentsapp.servlets.LogoutServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>logout</servlet-name>
+  	<url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+	<!--Time in Minutes -->
+  	<session-timeout>5</session-timeout>
+  </session-config>
+  
+   <servlet>
+  	<servlet-name>loginPage</servlet-name>
+  	<jsp-file>/LoginPageJSP.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>loginPage</servlet-name>
+  	<url-pattern>/loginPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>bodyWithHeaderFooter</servlet-name>
+  	<jsp-file>/BodyPageWithHeaderFooter.jsp</jsp-file>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>bodyWithHeaderFooter</servlet-name>
+  	<url-pattern>/bodyWithHeaderFooter</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

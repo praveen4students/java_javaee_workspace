@@ -1,0 +1,4 @@
+1. CReated a Singleton class which reads the contnet of the 
+   Property File at the time of creating an instance
+   
+2. 
