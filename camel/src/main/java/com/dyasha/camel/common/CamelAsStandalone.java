@@ -17,6 +17,7 @@ public class CamelAsStandalone {
         main.addRouteBuilder(new CamelFTPRouteBuilder());
         main.addRouteBuilder(new CamelActiveMQRouteBuilder());
         main.addRouteBuilder(new CamelSMTPRouteBuilder());
+//        main.addRouteBuilder(new CamelGMailRouteBuilder());
 
         main.run();
     }

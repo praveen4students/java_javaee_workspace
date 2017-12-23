@@ -101,6 +101,18 @@
 			<version>1.7.25</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-gae -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-gae</artifactId>
+			<version>2.17.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+			<version>1.6.0</version>
+		</dependency>
 
 	</dependencies>
 </project>
