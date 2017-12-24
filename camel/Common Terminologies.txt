@@ -18,6 +18,7 @@ Camel Components / Endpoints to Learn:-
 4. SFTP / camel-ftp
 5. SMTP / camel-mail
 6. ActiveMQ / activemq-camel
+7. SEDA / camel-core
 
 
 Cache / camel-cache
@@ -37,7 +38,7 @@ PDF / camel-pdf
 Quartz2 / camel-quartz2
 Rest / camel-core
 Scheduler / camel-core
-SEDA / camel-core
+
 SQL / camel-sql
 SQL Stored Procedure / camel-sql
 SSH component / camel-ssh

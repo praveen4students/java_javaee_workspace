@@ -5,10 +5,8 @@ import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.main.Main;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.dyasha.camel.activemq.CamelActiveMQRouteBuilder;
 import com.dyasha.camel.ftp.CamelFTPRouteBuilder;
-import com.dyasha.camel.microsoftexchangewebservices.CamelMicrosoftEWSRouteBuilder;
-import com.dyasha.camel.smtp.CamelSMTPRouteBuilder;
+import com.dyasha.camel.pdf.CamelPDFRouteBuilder;
 
 public class CamelAsStandalone {
 
@@ -17,9 +15,16 @@ public class CamelAsStandalone {
         
         /*main.addRouteBuilder(new CamelFTPRouteBuilder());
         main.addRouteBuilder(new CamelActiveMQRouteBuilder());
-        main.addRouteBuilder(new CamelSMTPRouteBuilder());*/
+        main.addRouteBuilder(new CamelSMTPRouteBuilder());
+        main.addRouteBuilder(new CamelToSedaRouteBuilder());
+        main.addRouteBuilder(new CamelFromSedaRouteBuilder());
+        */
+       
+        
+        //Need to Work on the Below !!!
+//        main.addRouteBuilder(new CamelPDFRouteBuilder());
 //        main.addRouteBuilder(new CamelGMailRouteBuilder());
-        main.addRouteBuilder(new CamelMicrosoftEWSRouteBuilder());
+//        main.addRouteBuilder(new CamelMicrosoftEWSRouteBuilder());
 
         main.run();
     }
