@@ -1,4 +1,4 @@
-package com.jspiders.corejava;
+package com.jspiders.corejava.cipher;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;

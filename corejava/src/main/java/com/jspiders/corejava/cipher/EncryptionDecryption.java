@@ -1,4 +1,4 @@
-package com.jspiders.corejava;
+package com.jspiders.corejava.cipher;
 
 public class EncryptionDecryption {
 	
