@@ -1,0 +1,50 @@
+java.lang.System
+-----------------
+> Concrete, Final class with Only One Constructor which is private in nature
+> Present from JDK 1.0
+
+Important Methods
+=====================
+public static native void arraycopy(Object src,  int  srcPos,
+                                    Object dest, int destPos,
+                                    int length)
+----------------------------------------------------------------									
+> Copies an array from the specified source array, beginning at the specified position, to the specified 
+  position of the destination array
+> The number of components copied is equal to the "length" argument
+> So, the components at positions srcPos through srcPos+length-1 in the source array are copied into 
+  positions destPos through destPos+length-1, respectively, of the destination array
+> If dest is null, then a NullPointerException is thrown
+> If src is null, then a NullPointerException is thrown and the destination array is not modified
+> Otherwise, if any of the following is true, an ArrayStoreException is thrown and the destination is 
+  not modified:
+
+	-  The src argument refers to an object that is not an array
+	-  The dest argument refers to an object that is not an array
+	-  The src argument and dest argument refer to arrays whose component types are different primitive 
+	   types
+	-  The src argument refers to an array with a primitive component type and the dest argument refers 
+	   to an array with a reference component type
+	-  The src argument refers to an array with a reference component type and the dest argument refers 
+	   to an array with a primitive component type
+	- if any actual component of the source array from position srcPos through srcPos+length-1 cannot be 
+	  converted to the component type of the destination array by assignment conversion
+	  							
+> Otherwise, if any of the following is true, an IndexOutOfBoundsException is thrown and the destination 
+  is not modified:
+
+	- The srcPos argument is negative
+	- The destPos argument is negative
+	- The length argument is negative
+	- srcPos+length is greater than src.length, the length of the source array
+	- destPos+length is greater than dest.length, the length of the destination array 
+										
+									
+									
+									
+									
+									
+									
+									
+									
+									

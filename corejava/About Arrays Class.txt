@@ -1,0 +1,85 @@
+java.util.Arrays (JDK 1.2)
+-------------------------------
+> This class is a member of the Java Collections Framework
+> It has ONLY ONE constructor which is "private default" in nature
+> This class contains various methods for manipulating arrays (such as sorting and searching)
+> This class also contains a static factory that allows arrays to be viewed as lists
+> The methods in this class all throws a "NullPointerException" if the specified array reference 
+  is null, except where noted
+  
+Methods:
+==========
+1.  public static void sort(<Data_Type>[] a)
+    
+	Data_Type = byte, int, short, long, float, double and char
+-----------------------------------------------------------------------	
+> Sorts the specified array into ascending numerical order
+> The sorting algorithm is a Dual-Pivot Quicksort
+> This algorithm offers O(n log(n)) performance on many data sets that cause other quicksorts 
+  to degrade to quadratic performance, and is typically faster than traditional (one-pivot) Quicksort implementations
+
+2.  public static void sort(<Data_Type>[] a, int fromIndex, int toIndex)
+    
+	Data_Type = byte, int, short, long, float, double and char
+-----------------------------------------------------------------------	
+> Sorts the specified range of the array into ascending order. 
+> The range to be sorted extends from the index "fromIndex" (inclusive), to "toIndex" (exclusive)
+> If fromIndex == toIndex the range to be sorted is empty   
+> Apart from the above, the Behaviour & Implementation details are same as above method 
+  
+3. public static void sort(Object[] a)
+-----------------------------------------------------------------------
+> Sorts the specified array of objects into ascending order, according to the Comparable natural
+   ordering of its elements
+> All elements in the array must implement the Comparable interface 
+> Furthermore, all elements in the array must be mutually comparable  
+> that is, obj1.compareTo(obj2) not throw a ClassCastException 
+> This sort is guaranteed to be "stable":  equal elements will not be reordered as a result of 
+  the sort   
+> This implementation is a stable, adaptive, iterative mergesort that requires far fewer than 
+  n lg(n) comparisons when the input array is partially sorted, while offering the performance of a traditional mergesort when the input array is randomly ordered
+> If the input array is nearly sorted, the implementation requires approximately n comparisons.  
+  Temporary storage requirements vary from a small constant for nearly sorted input arrays to n/2 object references for randomly ordered input arrays  
+   
+> The implementation takes equal advantage of ascending and descending order in its input array, 
+  and can take advantage of ascending and descending order in different parts of the the same
+  input array.  It is well-suited to merging two or more sorted arrays: simply concatenate the arrays and sort the resulting array.  
+   
+> The implementation was adapted from Tim Peters's list sort for Python : TimSort   
+
+
+3. public static void sort(Object[] a, int fromIndex, int toIndex)
+-----------------------------------------------------------------------
+> Sorts the specified range of the array into ascending order 
+> The range to be sorted extends from the index "fromIndex" (inclusive), to "toIndex" (exclusive)
+> If fromIndex == toIndex the range to be sorted is empty   
+> Apart from the above, the Behaviour & Implementation details are same as above method     
+   
+   
+4.  public static int binarySearch(<Data_Type>[] a, <Data_Type> key)   
+   
+    Data_Type = byte, int, short, long, float, double and char
+-----------------------------------------------------------------------
+> Searches the specified array of bytes for the specified value using the binary search algorithm  
+> The array must be sorted prior to making this call.  If it is not sorted, the results are undefined 
+> If found return the corresponding index as int otherwise -1
+> If the array contains multiple elements with the specified value, there is no guarantee which one will 
+  be found.   
+
+5.  public static int binarySearch(<Data_Type>[] a, int fromIndex, int toIndex, <Data_Type> key)   
+   
+    Data_Type = byte, int, short, long, float, double and char
+-----------------------------------------------------------------------   
+> Searches the key from the index "fromIndex" (inclusive), to "toIndex" (exclusive)    
+> If found return the corresponding index as int otherwise -1
+> Apart from the above, the Behaviour & Implementation details are same as above method     
+> this method is added in 1.6   
+   
+   
+   
+   
+   
+   
+   
+   
+   

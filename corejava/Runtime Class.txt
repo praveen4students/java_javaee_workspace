@@ -1,0 +1,24 @@
+java.lang.Runtime
+===================
+> Its a Singleton Class of JKD
+> Present from JDK 1.0
+
+
+
+
+
+
+public class Runtime 
+{
+    private static Runtime currentRuntime = new Runtime();
+
+    public static Runtime getRuntime() {
+        return currentRuntime;
+    }
+
+    private Runtime() {}
+	
+	/*
+	 * Many Other Methods
+	 */
+}

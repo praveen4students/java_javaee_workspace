@@ -1,0 +1,41 @@
+Q: What is Camel ?
+A: At a very abstract level, camel can be introduced as a routing engine. Camel allows us to define our routing rules to route messages from specified source to destination.
+Camel provides inbuilt support for many protocols which makes it easy for us to integrate different systems.
+For ex: Camel can easily integrate two different applications working in ftp and jms respectively. Internally Camel performs all the required protocol and datatype conversions for us.
+
+Q: Why you selected Camel for your application or why you use Camel?
+A: Camel is very lightweight routing engine that allows us to integrate different applications with minimal configuration. Inbuilt support for different protocols allows a developer to focus on business problem than on integration problem. Camel routing is not restricted to xml payload but it can route any type of message. Camel test kit further helps to test the solution.
+
+Q: Can we call camel an ESB (Enterprise service bus)?
+A: Although camel supports many features similar to ESB like routing, transformation etc., we cannot call camel as ESB because it does not have a container like ESBs. However, we can deploy camel on to some ESB container like service mix.
+
+Q: What are different message exchange patterns in Camel, which one of these is synchronous?
+A: There are two types of message exchange patterns in Camel:
+In Only: In this exchange pattern, consumer creates a exchange which only contains an In message.
+In Out: In this exchange pattern, consumer creates a exchange which also contains reply message for the caller.
+Out of above two, InOut pattern is synchronous because caller expects for an acknowledgement or reply for each exchange sent.
+
+Q: What is camel exchange? Explain its structure?
+A: A Camel Exchange can be called as an holder for holding message during routing. A exchange supports various message exchange patterns, like InOnly and InOut.
+Following are the contents of camel exchange:
+ExchangeId: A unique identifier for each exchange
+Message Exchange Pattern: This field denotes whether you are using InOnly or InOut exchange pattern.
+Exception: If any exception occurs during routing, it will be available in this field.
+Properties: These are the properties that are available for entire duration of exchange.
+In Message: This is mandatory field which contains the input message.
+Out Message: This is optional message which exists only if MEP is InOut.
+Q: What are different eip patterns in camel? What you have used? 
+
+Q: How to make a contract based webservices application(SOAP) using camel?
+
+Q: Two messages are there one from webservice, other from queue. Both need same processing, and routed to same queue. How will you make this application? 
+Q: Difference between Dynamic router eip and Routing slip eip?
+Q: How will you configure JMS endpoint in camel?
+Q: Is there any means to find source of exchange in camel?
+Q: What are different approaches to make camel web services application? How will you decide which approach to follow?
+Q: What are different expression languages in Camel?
+Q:Difference between JMS and activemq components in camel
+
+
+https://www.javacodegeeks.com/2012/07/when-to-use-apache-camel.html
+http://www.javacodebook.com/2013/07/24/spring-integration-vs-apache-camel/
